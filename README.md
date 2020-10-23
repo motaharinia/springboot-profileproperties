@@ -9,12 +9,6 @@ To load a specific profile property file we can use command line option -Dspring
 The default file application.properties can still be used by not using any -Dspring.profile.active option or by using -Dspring.profiles.active=default. The default properties file can be named as application-default.properties as well.
 The properties specified in default application.properties are overridden by the profile-specific file properties.
 
-further references:     
-- https://docs.spring.io/spring-boot/docs/1.1.x/reference/html/boot-features-profiles.html
-- https://www.logicbig.com/tutorials/spring-framework/spring-boot/profile-specific-properties.html
-- https://stackoverflow.com/questions/41244585/how-to-set-spring-active-profile-environment-variable-in-intellij/46345476
-- https://stackoverflow.com/questions/39738901/how-do-i-activate-a-spring-boot-profile-when-running-from-intellij
-
 ### reading properties by @Value:
 add resource tag to pom.xml inside <build> tag for reading properties by @Value
 ```
@@ -28,6 +22,13 @@ add resource tag to pom.xml inside <build> tag for reading properties by @Value
             </resource>
         </resources>
 ```
+
+further references:     
+- https://docs.spring.io/spring-boot/docs/1.1.x/reference/html/boot-features-profiles.html
+- https://www.logicbig.com/tutorials/spring-framework/spring-boot/profile-specific-properties.html
+- https://stackoverflow.com/questions/41244585/how-to-set-spring-active-profile-environment-variable-in-intellij/46345476
+- https://stackoverflow.com/questions/39738901/how-do-i-activate-a-spring-boot-profile-when-running-from-intellij
+
 
 ### Project Descriptions:
 run project and view 
