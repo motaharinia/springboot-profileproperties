@@ -1,4 +1,4 @@
-package com.motaharinia.profileproperties;
+package com.motaharinia.profileproperties.presentation.home;
 
 import com.motaharinia.ProfilePropertiesApplication;
 import org.springframework.beans.factory.annotation.Value;
@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
-public class Controller {
+public class HomeController {
 
     @Value("${spring.application.name}")
     private String springApplicationName;
@@ -17,12 +17,13 @@ public class Controller {
     @Value("${app.randomInt}")
     private Integer appRandomInt;
 
+
     @RequestMapping("/")
     public String getUrl() {
         return springApplicationName;
     }
 
-    @RequestMapping(value = "/randomInt",method = RequestMethod.POST)
+    @RequestMapping(value = "/randomInt", method = RequestMethod.POST)
     public Integer getRandomInt(@Validated ProfilePropertiesApplication profilePropertiesApplication) {
         return appRandomInt;
     }
